@@ -1,0 +1,18 @@
+Add_Inventory_Item      Adds Inventory Item to Database
+DB_Connect              Connect to PostgreSQL Database
+DB_Disconnect           Disconnect the PostgreSQL Database
+DB_Table_Exists         Check for Table in Database
+Get_Inventory_User      Queries Database and Returns Inventory Table
+Get_PM_Sales_Activity_User
+                        Queries Database for Poshmark Sales Activity
+Get_User_Goals          Queries Database for User Goals
+Get_User_Record         Retrieve User Record from User Table
+PM_Process_Return       Deletes Poshmark Sales Activity Record from
+                        Database
+Update_Inventory_Item   Updates Inventory Item(s) in Database
+Update_User_Goals       Updates User Goals in Database
+Update_User_Last        Update User Record with Last Logon Timestamp
+Update_User_Password    Update User Record with New Password
+Update_User_Profile     Update User Profile
+Write_Sales_Activity_User
+                        Writes Poshmark Sales Activity to Database
