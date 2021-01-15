@@ -1,0 +1,52 @@
+---
+title: "rsell"
+output: github_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Version 1.0.0
+
+Base functions for the R-Sell App.
+
+## Installation
+
+```{r, eval=FALSE}
+# install.packages("devtools")
+devtools::install_github("t2tech-corp/Rsell-Packages/rsell")
+```
+
+
+## Usage
+
+Package loaded from the **global.R** file in the Shiny App.
+
+## Link
+
+Package location in Github: [rsell](https://github.com/t2tech-corp/Rsell-Packages/tree/main/rsell)
+
+## List of Functions
+
+1. Check_Valid_Report
+2. Fix_Bin_Number
+3. Fix_Blank_SKU
+4. Fix_Partial_SKU
+5. Format_Alert_Text_Confirm
+6. Format_Alert_Text_Upload
+7. Get_Changed_Data
+8. Get_Changed_Goals
+9. Get_Item_Cost
+10. Get_Next_Sku
+11. GT_boxProfileT_Vals
+12. GT_InfoBoxT_Vals
+13. Load_Add_Inv_Rec
+14. Process_Valid_Report
+15. Secure_Check 
+16. Submit_Sales_Activity_DB
+17. Toast_Message
+18. Update_Inventory_PM
+19. Update_Quantity_Add

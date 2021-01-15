@@ -1,0 +1,55 @@
+---
+title: "rsellTables"
+output: github_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Version 1.0.0
+
+Base functions for creating tables used within the R-Sell App.
+
+## Installation
+
+```{r, eval=FALSE}
+# install.packages("devtools")
+devtools::install_github("t2tech-corp/Rsell-Packages/rsellTables")
+```
+
+
+## Usage
+
+Package loaded from the **global.R** file in the Shiny App.
+
+## Link
+
+Package location in Github: [rsell](https://github.com/t2tech-corp/Rsell-Packages/tree/main/rsellTables)
+
+## List of Functions
+
+1. Cash_Flow_Summary
+2. Daily_Sales_Summary
+3. Inv_Bin_Summary
+4. Inv_Bin_Table
+5. Listed_Inventory_Summary
+6. Merch_Sales_Summary
+7. Monthly_Inventory_Detail
+8. Monthly_Inventory_Summary
+9. Monthly_Sales_Detail
+10. Monthly_Sales_Summary
+11. Open_Inventory_Summary
+12. PM_Monthly_Activity
+13. PM_Sales_Monthly
+14. PM_Sales_Summary
+15. PM_Summary_For_Chart
+16. PM_Summary_Stats
+17. PM_Summary_Stats_Conf
+18. PM_Var_Summary
+19. Sold_Inventory_Summary
+20. Source_Inventory_Summary
+21. Total_Inventory_Summary
+

@@ -1,0 +1,40 @@
+---
+title: "rsellModals"
+output: github_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Version 1.0.0
+
+Base functions for creating display modals within the R-Sell App.
+
+## Installation
+
+```{r, eval=FALSE}
+# install.packages("devtools")
+devtools::install_github("t2tech-corp/Rsell-Packages/rsellModals")
+```
+
+
+## Usage
+
+Package loaded from the **global.R** file in the Shiny App.
+
+## Link
+
+Package location in Github: [rsell](https://github.com/t2tech-corp/Rsell-Packages/tree/main/rsellModals)
+
+## List of Functions
+
+1. Change_Password_Modal
+2. Copy_Item_Modal
+3. Item_Source_Modal_Edit
+4. Item_Source_Modal_New
+5. User_Goal_Modal
+6. User_Profile_Modal
+

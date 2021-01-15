@@ -1,0 +1,49 @@
+---
+title: "rsellDB"
+output: github_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Version 1.0.0
+
+Base functions for performing database activities within the R-Sell App.
+
+## Installation
+
+```{r, eval=FALSE}
+# install.packages("devtools")
+devtools::install_github("t2tech-corp/Rsell-Packages/rsellDB")
+```
+
+
+## Usage
+
+Package loaded from the **global.R** file in the Shiny App.
+
+## Link
+
+Package location in Github: [rsell](https://github.com/t2tech-corp/Rsell-Packages/tree/main/rsellDB)
+
+## List of Functions
+
+1. Add_Inventory_Item
+2. DB_Connect
+3. DB_Disconnect
+4. DB_Table_Exists
+5. Get_Inventory_User
+6. Get_PM_Sales_Activity_User
+7. Get_User_Goals
+8. Get_User_Record
+9. PM_Process_Return
+10. Update_Inventory_Item
+11. Update_User_Goals
+12. Update_User_Last
+13. Update_User_Password
+14. Update_User_Profile
+15. Write_Sales_Activity_User
+

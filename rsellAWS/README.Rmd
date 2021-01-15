@@ -1,0 +1,38 @@
+---
+title: "rsellAWS"
+output: github_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Version 1.0.0
+
+Base functions for connecting to AWS Buckets used by the R-Sell App.
+
+## Installation
+
+```{r, eval=FALSE}
+# install.packages("devtools")
+devtools::install_github("t2tech-corp/Rsell-Packages/rsellAWS")
+```
+
+
+## Usage
+
+Package loaded from the **global.R** file in the Shiny App.
+
+## Link
+
+Package location in Github: [rsell](https://github.com/t2tech-corp/Rsell-Packages/tree/main/rsellAWS)
+
+## List of Functions
+
+1. Read_AWS_Bin
+2. Read_AWS_Brand
+3. Read_AWS_Category
+4. Read_AWS_Color
+5. Read_AWS_Edit

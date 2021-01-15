@@ -1,0 +1,41 @@
+---
+title: "rsellDT"
+output: github_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Version 1.0.0
+
+Base functions for creating Datatable reports within the R-Sell App.
+
+## Installation
+
+```{r, eval=FALSE}
+# install.packages("devtools")
+devtools::install_github("t2tech-corp/Rsell-Packages/rsellDT")
+```
+
+
+## Usage
+
+Package loaded from the **global.R** file in the Shiny App.
+
+## Link
+
+Package location in Github: [rsell](https://github.com/t2tech-corp/Rsell-Packages/tree/main/rsellDT)
+
+## List of Functions
+
+1. Daily_Popup
+2. Inv_Bin_Detail
+3. Inv_Popup
+4. Inventory_Table
+5. PM_Summary_Table
+6. Sales_Activity_Table
+7. Sales_Popup
+
