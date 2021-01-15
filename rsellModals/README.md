@@ -9,7 +9,7 @@ Base functions for creating display modals within the R-Sell App.
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("t2tech-corp/Rsell-Packages/rsellModals")
+devtools::install_github("t2tech-corp/Rsell-Packages", subdir = "rsellModals")
 ```
 
 ## Usage

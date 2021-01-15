@@ -9,7 +9,7 @@ Base functions for creating ggplot2 charts used by the R-Sell App.
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("t2tech-corp/Rsell-Packages/rsellCharts")
+devtools::install_github("t2tech-corp/Rsell-Packages", subdir = "rsellCharts")
 ```
 
 ## Usage

@@ -9,7 +9,7 @@ Base functions for security within the R-Sell App.
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("t2tech-corp/Rsell-Packages/rsellSecurity")
+devtools::install_github("t2tech-corp/Rsell-Packages", subdir = "rsellSecurity")
 ```
 
 ## Usage

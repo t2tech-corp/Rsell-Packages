@@ -9,7 +9,7 @@ Base functions for the R-Sell App.
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("t2tech-corp/Rsell-Packages/rsell")
+devtools::install_github("t2tech-corp/Rsell-Packages", subdir = "rsell")
 ```
 
 ## Usage

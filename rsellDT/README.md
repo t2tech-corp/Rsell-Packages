@@ -9,7 +9,7 @@ Base functions for creating Datatable reports within the R-Sell App.
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("t2tech-corp/Rsell-Packages/rsellDT")
+devtools::install_github("t2tech-corp/Rsell-Packages", subdir = "rsellDT")
 ```
 
 ## Usage

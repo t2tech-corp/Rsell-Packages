@@ -9,7 +9,7 @@ Base functions for connecting to AWS Buckets used by the R-Sell App.
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("t2tech-corp/Rsell-Packages/rsellAWS")
+devtools::install_github("t2tech-corp/Rsell-Packages", subdir = "rsellAWS")
 ```
 
 ## Usage

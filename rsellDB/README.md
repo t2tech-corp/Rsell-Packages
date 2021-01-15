@@ -9,7 +9,7 @@ Base functions for performing database activities within the R-Sell App.
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("t2tech-corp/Rsell-Packages/rsellDB")
+devtools::install_github("t2tech-corp/Rsell-Packages", subdir = "rsellDB")
 ```
 
 ## Usage
