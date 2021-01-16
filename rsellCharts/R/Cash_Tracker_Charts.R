@@ -58,7 +58,7 @@ Cash_Tracker_Charts <- function(cf_table, chart_var, chart_title) {
 
                 geom_hline(yintercept = 0, linetype = "solid",  size = .5, color = "#cccbce") +
 
-                coord_cartesian(xlim = c(min(cf_table$o_date) - weeks(1), Sys.Date())) +
+                coord_cartesian(xlim = c(min(cf_table$o_date) - weeks(1), Sys.Date() + weeks(1))) +
 
                 scale_y_continuous(breaks = c(man_y),
                                    labels = scales::dollar_format()) +
@@ -74,6 +74,7 @@ Cash_Tracker_Charts <- function(cf_table, chart_var, chart_title) {
     ##
 
     g_chart <- girafe(ggobj = m_chart,
+                      fonts = list(sans = "Arial"),
                       width_svg = 14, height_svg = 4)
 
     g_chart <- girafe_options(x = g_chart,

@@ -68,7 +68,7 @@ Cash_Flow_Chart <- function(cf_table, chart_title) {
 
                 geom_hline(yintercept = 0, linetype = "solid", size = .5, color = "#cccbce") +
 
-                coord_cartesian(xlim = c(min(chart_data$o_date) - weeks(1), Sys.Date())) +
+                coord_cartesian(xlim = c(min(chart_data$o_date) - weeks(1), Sys.Date() + weeks(1))) +
 
                 scale_fill_manual(values = c("#a2a0a6", "#f4bec3"), guide = FALSE) +
 
@@ -81,6 +81,7 @@ Cash_Flow_Chart <- function(cf_table, chart_title) {
     ##
 
     g_chart <- girafe(ggobj = m_chart,
+                      fonts = list(sans = "Arial"),
                       width_svg = 14, height_svg = 4)
 
     g_chart <- girafe_options(x = g_chart,
