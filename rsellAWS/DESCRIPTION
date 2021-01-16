@@ -11,8 +11,3 @@ Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
-NeedsCompilation: no
-Packaged: 2021-01-09 16:02:38 UTC; tterry
-Author: Tim Terry [aut, cre]
-Maintainer: Tim Terry <t2techcorp@gmail.com>
-Built: R 3.6.2; ; 2021-01-09 16:02:39 UTC; windows
