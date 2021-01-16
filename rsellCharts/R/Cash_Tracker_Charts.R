@@ -42,7 +42,7 @@ Cash_Tracker_Charts <- function(cf_table, chart_var, chart_title) {
 
                 labs(title = chart_title, x = "", y = "") +
 
-                theme_light() +
+                theme_light(base_family = "sans") +
 
                 theme(panel.grid.major = element_blank(),
                       panel.grid.minor = element_blank(),

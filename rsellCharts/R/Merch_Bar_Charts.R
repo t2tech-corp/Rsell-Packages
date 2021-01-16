@@ -41,7 +41,7 @@ Merch_Bar_Charts <- function(chart_data, x_axis, chart_type, chart_title) {
 
                 labs(title = chart_title, x = "", y = "") +
 
-                theme_light() +
+                theme_light(base_family = "sans") +
 
                 theme(panel.grid.major = element_blank(),
                       panel.grid.minor = element_blank(),
@@ -78,6 +78,7 @@ Merch_Bar_Charts <- function(chart_data, x_axis, chart_type, chart_title) {
     ###
 
     g_chart <- girafe(ggobj = m_chart,
+                      fonts = list(sans = "Arial"),
                       width_svg = 8, height_svg = 5)
 
     g_chart <- girafe_options(x = g_chart,
