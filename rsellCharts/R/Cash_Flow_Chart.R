@@ -15,10 +15,13 @@ Cash_Flow_Chart <- function(cf_table, chart_title) {
 
     ##### Set Cash Outlays to Negative
 
-    chart_data <- cf_table %>%
-                  mutate(tool_tip_in = scales::dollar(week_in),
-                         tool_tip_ot = scales::dollar(week_out)) %>%
-                  mutate(week_out = week_out * -1)
+    cf_table <- cf_table %>%
+                mutate(tool_tip_in = scales::dollar(week_in),
+                       tool_tip_ot = scales::dollar(week_out)) %>%
+                mutate(week_out = week_out * -1)
+
+    cf_table$tool_tip_in <- paste0("Week Ending\n", format.Date(cf_table$o_date, "%B %d, %Y"), "\n\n", "Weekly Earnings\n", cf_table$tool_tip_in)
+    cf_table$tool_tip_ot <- paste0("Week Ending\n", format.Date(cf_table$o_date, "%B %d, %Y"), "\n\n", "Weekly Expenses\n", cf_table$tool_tip_ot)
 
     ##### Set CSS #####
 
@@ -28,7 +31,7 @@ Cash_Flow_Chart <- function(cf_table, chart_title) {
 
     ##### Set Y Axis #####
 
-    man_y <- pretty(c(min(chart_data$week_out), max(chart_data$week_in)))
+    man_y <- pretty(c(min(cf_table$week_out), max(cf_table$week_in)))
 
     ##### Create Chart #####
 
@@ -36,7 +39,7 @@ Cash_Flow_Chart <- function(cf_table, chart_title) {
 
                 labs(title = chart_title, x = "", y = "") +
 
-                theme_light(base_family = "sans") +
+                theme_light() +
 
                 theme(panel.grid.major = element_blank(),
                       panel.grid.minor = element_blank(),
@@ -48,7 +51,7 @@ Cash_Flow_Chart <- function(cf_table, chart_title) {
 
                 geom_hline(yintercept = man_y[man_y != 0], linetype = "dashed", size = .5, color = "#cccbce") +
 
-                geom_bar_interactive(data = chart_data,
+                geom_bar_interactive(data = cf_table,
                                      aes(x = o_date,
                                          y = week_out,
                                          fill = "#a2a0a6",
@@ -57,7 +60,7 @@ Cash_Flow_Chart <- function(cf_table, chart_title) {
                                      stat = "identity",
                                      width = 3.0) +
 
-                geom_bar_interactive(data = chart_data,
+                geom_bar_interactive(data = cf_table,
                                      aes(x = o_date,
                                          y = week_in,
                                          fill = "#f4bec3",
@@ -68,7 +71,7 @@ Cash_Flow_Chart <- function(cf_table, chart_title) {
 
                 geom_hline(yintercept = 0, linetype = "solid", size = .5, color = "#cccbce") +
 
-                coord_cartesian(xlim = c(min(chart_data$o_date) - weeks(1), Sys.Date() + weeks(1))) +
+                coord_cartesian(xlim = c(min(cf_table$o_date) - weeks(1), Sys.Date() + weeks(1))) +
 
                 scale_fill_manual(values = c("#a2a0a6", "#f4bec3"), guide = FALSE) +
 
@@ -81,11 +84,10 @@ Cash_Flow_Chart <- function(cf_table, chart_title) {
     ##
 
     g_chart <- girafe(ggobj = m_chart,
-                      fonts = list(sans = "Arial"),
                       width_svg = 14, height_svg = 4)
 
     g_chart <- girafe_options(x = g_chart,
-                              opts_tooltip(css = tooltip_css, offx = -80, offy = -80),
+                              opts_tooltip(css = tooltip_css, offx = -80, offy = -120),
                               opts_hover(css = hover_css),
                               opts_hover_inv(css = hover_inv_css),
                               opts_toolbar(saveaspng = FALSE),

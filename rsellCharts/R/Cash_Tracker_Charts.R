@@ -18,6 +18,8 @@ Cash_Tracker_Charts <- function(cf_table, chart_var, chart_title) {
                 mutate(pos_neg  = !!as.symbol(chart_var) >= 0,
                        tool_tip = scales::dollar(!!as.symbol(chart_var)))
 
+    cf_table$tool_tip <- paste0("Week Ending\n", format.Date(cf_table$o_date, "%B %d, %Y"), "\n\n", chart_title, cf_table$tool_tip)
+
     ##### Set CSS #####
 
     tooltip_css   <- "background-color: #565455; color: white; padding: 10px; border-radius: 5px;"
@@ -42,7 +44,7 @@ Cash_Tracker_Charts <- function(cf_table, chart_var, chart_title) {
 
                 labs(title = chart_title, x = "", y = "") +
 
-                theme_light(base_family = "sans") +
+                theme_light() +
 
                 theme(panel.grid.major = element_blank(),
                       panel.grid.minor = element_blank(),
@@ -74,11 +76,10 @@ Cash_Tracker_Charts <- function(cf_table, chart_var, chart_title) {
     ##
 
     g_chart <- girafe(ggobj = m_chart,
-                      fonts = list(sans = "Arial"),
                       width_svg = 14, height_svg = 4)
 
     g_chart <- girafe_options(x = g_chart,
-                              opts_tooltip(css = tooltip_css, offx = -80, offy = -80),
+                              opts_tooltip(css = tooltip_css, offx = -80, offy = -120),
                               opts_hover(css = hover_css),
                               opts_hover_inv(css = hover_inv_css),
                               opts_toolbar(saveaspng = FALSE),
