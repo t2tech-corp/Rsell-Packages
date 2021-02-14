@@ -7,7 +7,7 @@
 DB_Disconnect(db_con)
 }
 \arguments{
-\item{db_con}{}
+\item{db_con}{The connection parameters to the database.}
 }
 \value{
 db_con The connection parameters to the database.
@@ -17,7 +17,4 @@ This function disconnects the PostgreSQL Database.
 }
 \details{
 Requires: RPostgres
-}
-\examples{
-
 }

@@ -7,7 +7,6 @@
 #' @param inv_table The Inventory Table for the user.
 #' @return A Merchant Sales Summary Table as a data frame.
 #' @export
-#' @examples
 #'
 
 Merch_Sales_Summary <- function(inv_table) {

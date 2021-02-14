@@ -10,7 +10,6 @@
 #' @param db_pass The database password for the user ID.
 #' @return db_con The connection parameters to the database.
 #' @export
-#' @examples
 #'
 
 DB_Connect <- function(db_name, db_host, db_user, db_pass) {

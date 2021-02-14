@@ -31,19 +31,16 @@ Package location in Github: [rsell](https://github.com/t2tech-corp/Rsell-Package
 
 ## List of Functions
 
-1. Add_Inventory_Item
+1. DB_Append_Table
 2. DB_Connect
-3. DB_Disconnect
-4. DB_Table_Exists
-5. Get_Inventory_User
-6. Get_PM_Sales_Activity_User
-7. Get_User_Goals
-8. Get_User_Record
-9. PM_Process_Return
-10. Update_Inventory_Item
-11. Update_User_Goals
-12. Update_User_Last
-13. Update_User_Password
-14. Update_User_Profile
-15. Write_Sales_Activity_User
-
+3. DB_Create_Table
+4. DB_Disconnect
+5. DB_Execute_Command
+6. DB_Inventory_Record_Update
+7. DB_List_Fields
+8. DB_List_Tables
+9. DB_Read_Table
+10. DB_Read_Table_User
+11. DB_Remove_Table
+12. DB_Table_Exists
+ 

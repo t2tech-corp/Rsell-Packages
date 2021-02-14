@@ -10,14 +10,11 @@ Monthly_Sales_Summary(inv_table)
 \item{inv_table}{The Inventory Table for the user.}
 }
 \value{
-A Monthly Sales Summary Table as a data frame.
+ym_sales_summary A Monthly Sales Summary Table as a data frame.
 }
 \description{
 This function creates a Monthly Sales Summary Table from the Inventory Table.
 }
 \details{
-Requires: dplyr, lubridate
-}
-\examples{
-
+Requires: dplyr
 }

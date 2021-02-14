@@ -6,7 +6,6 @@
 #'
 #' @return Modal Dialog in App
 #' @export
-#' @examples
 #'
 
 User_Profile_Modal <- function() {

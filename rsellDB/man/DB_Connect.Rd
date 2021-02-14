@@ -24,6 +24,3 @@ This function connects to the PostgreSQL Database.
 \details{
 Requires: RPostgres
 }
-\examples{
-
-}

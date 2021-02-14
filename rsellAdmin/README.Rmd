@@ -1,0 +1,37 @@
+---
+title: "rsellAdmin"
+output: github_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Version 1.0.0
+
+Base functions for the R-Sell App Administrator.
+
+## Installation
+
+```{r, eval=FALSE}
+# install.packages("devtools")
+devtools::install_github("t2tech-corp/Rsell-Packages", subdir = "rsellAdmin")
+```
+
+
+## Usage
+
+Package loaded from the **global.R** file in the Shiny App.
+
+## Link
+
+Package location in Github: [rsell](https://github.com/t2tech-corp/Rsell-Packages/tree/main/rsellAdmin)
+
+## List of Functions
+
+1. DT_Admin_User_Table
+2. User_Goals_Update
+3. User_Record_Delete
+4. User_Record_Update

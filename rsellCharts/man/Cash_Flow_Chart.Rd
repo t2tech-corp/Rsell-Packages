@@ -20,6 +20,3 @@ This function Creates Cash Flow Chart.
 \details{
 Requires: ggplot2, dplyr
 }
-\examples{
-
-}

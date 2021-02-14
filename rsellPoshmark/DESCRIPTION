@@ -1,0 +1,13 @@
+Package: rsellPoshmark
+Title: Poshmark Functions for the R-Sell App
+Version: 1.0.0
+Authors@R: 
+    person(given = "Tim",
+           family = "Terry",
+           role = c("aut", "cre"),
+           email = "t2techcorp@gmail.com")
+Description: Poshmark Functions for the R-Sell App.
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1

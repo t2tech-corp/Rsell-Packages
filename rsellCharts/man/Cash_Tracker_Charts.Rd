@@ -22,6 +22,3 @@ This function Creates Cash Tracker Charts.
 \details{
 Requires: ggplot2, dplyr
 }
-\examples{
-
-}

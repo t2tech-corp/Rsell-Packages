@@ -15,6 +15,3 @@ This function Creates the User Profile Modal.
 \details{
 Requires: shiny
 }
-\examples{
-
-}

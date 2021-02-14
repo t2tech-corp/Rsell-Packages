@@ -27,6 +27,4 @@ Package location in Github:
 2.  Inv\_Bin\_Detail
 3.  Inv\_Popup
 4.  Inventory\_Table
-5.  PM\_Summary\_Table
-6.  Sales\_Activity\_Table
-7.  Sales\_Popup
+5.  Sales\_Popup

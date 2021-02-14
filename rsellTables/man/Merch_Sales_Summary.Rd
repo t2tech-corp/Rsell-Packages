@@ -18,6 +18,3 @@ This function creates a Merchant Sales Summary Table from the Inventory Table.
 \details{
 Requires: dplyr
 }
-\examples{
-
-}

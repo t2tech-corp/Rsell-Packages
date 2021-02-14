@@ -26,4 +26,3 @@ Package location in Github:
 1.  Cash\_Flow\_Chart
 2.  Cash\_Tracker\_Charts
 3.  Merch\_Bar\_Charts
-4.  PM\_Bar\_Charts

@@ -22,6 +22,3 @@ This function performs a security check for the tab to be accessed.
 \details{
 Requires:
 }
-\examples{
-
-}

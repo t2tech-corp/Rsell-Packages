@@ -32,24 +32,24 @@ Package location in Github: [rsell](https://github.com/t2tech-corp/Rsell-Package
 ## List of Functions
 
 1. Cash_Flow_Summary
-2. Daily_Sales_Summary
-3. Inv_Bin_Summary
-4. Inv_Bin_Table
-5. Listed_Inventory_Summary
-6. Merch_Sales_Summary
-7. Monthly_Inventory_Detail
-8. Monthly_Inventory_Summary
-9. Monthly_Sales_Detail
-10. Monthly_Sales_Summary
-11. Open_Inventory_Summary
-12. PM_Monthly_Activity
-13. PM_Sales_Monthly
-14. PM_Sales_Summary
-15. PM_Summary_For_Chart
-16. PM_Summary_Stats
-17. PM_Summary_Stats_Conf
-18. PM_Var_Summary
-19. Sold_Inventory_Summary
-20. Source_Inventory_Summary
-21. Total_Inventory_Summary
-
+2. Create_YM_Inventory_Added_Summary
+3. Create_YM_Inventory_Sell_Through
+4. Create_YM_Inventory_sold_Summary
+5. Create_YM_Sales_Summary
+6. Create_YM_Table
+7. Create_YW_Cash_Flow_Cum
+8. Create_YW_Cash_Flow_In
+9. Create_YW_Cash_Flow_Out
+10. Create_YW_Table
+11. Daily_Sales_Summary
+12. Inv_Bin_Summary
+13. Inv_Bin_Table
+14. Inventory_Summary_Listed
+15. Inventory_Summary_Open
+16. Inventory_Summary_Sold
+17. Inventory_Summary_Total
+18. Merch_Sales_Summary
+19. Monthly_Inventory_Detail
+20. Monthly_Inventory_Sell_Through
+21. Monthly_Sales_Detail
+22. Monthly_Sales_Summary

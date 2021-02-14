@@ -1,0 +1,55 @@
+---
+title: "rsellPoshmark"
+output: github_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Version 1.0.0
+
+Base functions for Poshmark processing in R-Sell App.
+
+## Installation
+
+```{r, eval=FALSE}
+# install.packages("devtools")
+devtools::install_github("t2tech-corp/Rsell-Packages", subdir = "rsellPoshmark")
+```
+
+
+## Usage
+
+Package loaded from the **global.R** file in the Shiny App.
+
+## Link
+
+Package location in Github: [rsell](https://github.com/t2tech-corp/Rsell-Packages/tree/main/rsellPoshmark)
+
+## List of Functions
+
+1. PM_Bar_Charts
+2. PM_DT_Sales_Activity_Table
+3. PM_DT_Summary_Table
+4. PM_Sales_Table_Delete_Record
+5. PM_Sales_Table_Sort
+6. PM_Sales_Upload_Blank_SKU
+7. PM_Sales_Upload_Format_Confirm
+8. PM_Sales_Upload_Format_Summary
+9. PM_Sales_Upload_Item_Cost
+10. PM_Sales_Upload_Partial_SKU
+11. PM_Sales_Upload_Process
+12. PM_Sales_Upload_Submit
+13. PM_Sales_Upload_Summary_Stats
+14. PM_Sales_Upload_Update_Inventory
+15. PM_Sales_Upload_Validate
+16. PM_Table_Monthly_Activate
+17. PM_Table_Sales_Monthly
+18. PM_Table_Sales_Summary
+19. PM_Table_Summary_For_Chart
+20. PM_Table_Summary_Stats_Conf
+21. PM_Table_Var_Summary
+

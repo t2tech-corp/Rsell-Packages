@@ -20,6 +20,3 @@ This function generates a toast message.
 \details{
 Requires: shinytoastr
 }
-\examples{
-
-}

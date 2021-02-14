@@ -4,10 +4,9 @@
 #'
 #' Requires: RPostgres
 #'
-#' @param  db_con
+#' @param  db_con The connection parameters to the database.
 #' @return db_con The connection parameters to the database.
 #' @export
-#' @examples
 #'
 
 DB_Disconnect <- function(db_con) {

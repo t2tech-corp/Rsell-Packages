@@ -15,9 +15,17 @@
 
 login <- function(input, output, session, log_out = NULL) {
 
+    ####  Initialize Credentials ---------------------------------------------------------------------------------------------------- ####
+    ##                                                                                                                                  ##
+
     credentials <- reactiveValues(user_auth = FALSE)
 
-    ###
+    ##                                                                                                                                  ##
+    #### ---------------------------------------------------------------------------------------------------------------------------- ####
+
+
+    ####  Logout Observer ----------------------------------------------------------------------------------------------------------- ####
+    ##                                                                                                                                  ##
 
     observeEvent(log_out(), {
 
@@ -27,7 +35,12 @@ login <- function(input, output, session, log_out = NULL) {
 
     })
 
-    ###
+    ##                                                                                                                                  ##
+    #### ---------------------------------------------------------------------------------------------------------------------------- ####
+
+
+    ####  User Auth Observer -------------------------------------------------------------------------------------------------------- ####
+    ##                                                                                                                                  ##
 
     observeEvent(credentials$user_auth, ignoreInit = TRUE, {
 
@@ -35,63 +48,118 @@ login <- function(input, output, session, log_out = NULL) {
 
     })
 
-    ##### Validate Submitted User ID and Password ####
+    ##                                                                                                                                  ##
+    #### ---------------------------------------------------------------------------------------------------------------------------- ####
+
+
+
+    ####  Login Button Observer ----------------------------------------------------------------------------------------------------- ####
+    ##                                                                                                                                  ##
 
     observeEvent(input$button, {
 
-        db_error <- valid_user <- password_match <- active_account <- authorized_user <- FALSE
+        ####  Initialize Login Sequence Statuses ------------------------------------------------------------------------------------ ####
+        ##                                                                                                                              ##
 
-        #### Check for Valid Tables ####
+        db_error <- valid_user <- password_match <- active_account <- authorized_user <- admin_user <- FALSE
 
-        if( !user_table_exists | !pm_sales_table_exists | !inv_table_exists | !user_goals_table_exists ) {
+        ##                                                                                                                              ##
+        #### ------------------------------------------------------------------------------------------------------------------------ ####
 
-            db_error <- TRUE
 
-        }
+        ####  Check for Valid Tables ------------------------------------------------------------------------------------------------ ####
+        ##                                                                                                                              ##
 
-        #### Fetch User Records and Validate User ####
+        if( !user_table_exists | !pm_sales_exists | !inv_table_exists | !user_goals_exists ) { db_error <- TRUE }
+
+        ##                                                                                                                              ##
+        #### ------------------------------------------------------------------------------------------------------------------------ ####
+
+
+        ####  Fetch User Records and Validate User ---------------------------------------------------------------------------------- ####
+        ##                                                                                                                              ##
 
         if(!db_error) {
 
-            user_record <- Get_User_Record(input$user_name)
+            user_record <- DB_Read_Table_User(user_table_name, input$user_name)
 
-            if(nrow(user_record) > 0) { valid_user <- TRUE }
-
-        }
-
-        #### Validate Password ####
-
-        if(valid_user) {
-
-            password_match <- sodium::password_verify(user_record$pwd_hash, input$password)
+            if(nrow(user_record) == 1) { valid_user <- TRUE }
 
         }
 
-        #### Validate Status ####
+        ##                                                                                                                              ##
+        #### ------------------------------------------------------------------------------------------------------------------------ ####
 
-        if(password_match) {
 
-            if(user_record$status == "Active") { active_account <- TRUE }
+        ####  Validate Password ----------------------------------------------------------------------------------------------------- ####
+        ##                                                                                                                              ##
 
-        }
+        if(valid_user) { password_match <- sodium::password_verify(user_record$pwd_hash, input$password) }
 
-        #### Validate App Access and Update Last Logon ####
+        ##                                                                                                                              ##
+        #### ------------------------------------------------------------------------------------------------------------------------ ####
 
-        if(active_account) {
 
-            authorized_user <- TRUE
+        ####  Validate Status ------------------------------------------------------------------------------------------------------- ####
+        ##                                                                                                                              ##
 
-            credentials$user_auth <- TRUE
+        if(password_match) { if(user_record$status == "Active") { active_account <- TRUE } }
 
-            session_user_record <<- user_record
+        ##                                                                                                                              ##
+        #### ------------------------------------------------------------------------------------------------------------------------ ####
+
+
+        ####  Validate App Access --------------------------------------------------------------------------------------------------- ####
+        ##                                                                                                                              ##
+
+        if(active_account) { credentials$user_auth <- authorized_user <- TRUE }
+
+        ##                                                                                                                              ##
+        #### ------------------------------------------------------------------------------------------------------------------------ ####
+
+
+        ####  Update User Last Logon ------------------------------------------------------------------------------------------------ ####
+        ##                                                                                                                              ##
+
+        if(authorized_user) {
 
             user_record$last_logon <- as.character(Sys.time())
 
-            Update_User_Last(user_record)
+            session_user_record <<- user_record
+
+            #
+
+            changed_idx <- which(names(user_record) == "last_logon")
+
+            User_Record_Update(user_record, changed_idx)
+
+            #
+
+            if(user_record$role == "Admin") { admin_user <- TRUE }
 
         }
 
-        #### Generate Error Message Based on Statuses ####
+        ##                                                                                                                              ##
+        #### ------------------------------------------------------------------------------------------------------------------------ ####
+
+
+        ####  Load Inventory Table for User ----------------------------------------------------------------------------------------- ####
+        ##                                                                                                                              ##
+
+        if(authorized_user & !admin_user) {
+
+            if(is.null(inv_table)) { inv_table <<- DB_Read_Table_User(inv_table_name) }
+
+            inv_table <<- Sort_Inv_Table(inv_table)
+
+        }
+
+        ##                                                                                                                              ##
+        #### ------------------------------------------------------------------------------------------------------------------------ ####
+
+
+        ####  Generate Error Message Based on Statuses ------------------------------------------------------------------------------ ####
+        ##                                                                                                                              ##
 
         if(db_error) {
 
@@ -128,14 +196,23 @@ login <- function(input, output, session, log_out = NULL) {
 
         }
 
+        ##                                                                                                                              ##
+        #### ------------------------------------------------------------------------------------------------------------------------ ####
+
     })
 
-    #### return reactive list containing auth boolean and user information
+
+
+    ####  Return Reactive List - Credentials ---------------------------------------------------------------------------------------- ####
+    ##                                                                                                                                  ##
 
     reactive({
 
         reactiveValuesToList(credentials)
 
     })
+
+    ##                                                                                                                                  ##
+    #### ---------------------------------------------------------------------------------------------------------------------------- ####
 
 }

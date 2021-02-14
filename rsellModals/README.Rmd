@@ -37,4 +37,3 @@ Package location in Github: [rsell](https://github.com/t2tech-corp/Rsell-Package
 4. Item_Source_Modal_New
 5. User_Goal_Modal
 6. User_Profile_Modal
-

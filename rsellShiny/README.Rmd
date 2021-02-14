@@ -35,4 +35,3 @@ Package location in Github: [rsell](https://github.com/t2tech-corp/Rsell-Package
 2. boxProfileT
 3. dropdownMenuT
 4. infoBoxT
-

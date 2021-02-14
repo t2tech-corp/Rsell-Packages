@@ -13,6 +13,10 @@
 
 Inventory_Table <- function(inv_table, rem_flag = FALSE) {
 
+    if(nrow(inv_table) == 0) { inv_DT <- NULL ; return(inv_DT) }
+
+    #
+
     vals <- reactiveValues()
 
     button_def <- "<button id=\"XXXX\" type=\"button\" class=\"btn btn-default action-button\" style=\"color: #565455; background-color: #fbe7e9; border-color: #565455;\"

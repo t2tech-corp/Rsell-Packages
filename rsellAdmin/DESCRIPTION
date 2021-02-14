@@ -1,0 +1,13 @@
+Package: rsellAdmin
+Title: Administrative Tools for the R-Sell Application
+Version: 1.0.0
+Authors@R: 
+    person(given = "Tim",
+           family = "Terry",
+           role = c("aut", "cre"),
+           email = "t2techcorp@gmail.com")
+Description: Administrative Tools for the R-Sell Application.
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1

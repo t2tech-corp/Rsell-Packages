@@ -8,7 +8,6 @@
 #' @param tr_type The type of Toast message to generate.
 #' @return A Toast message at the bottom right of the page.
 #' @export
-#' @examples
 #'
 
 Toast_Message <- function(tr_message, tr_type) {

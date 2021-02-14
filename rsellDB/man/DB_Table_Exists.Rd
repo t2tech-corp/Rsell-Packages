@@ -20,6 +20,3 @@ This function checks for the existence of a specific table in the database.
 \details{
 Requires: RPostgres
 }
-\examples{
-
-}

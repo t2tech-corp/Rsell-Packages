@@ -31,22 +31,15 @@ Package location in Github: [rsell](https://github.com/t2tech-corp/Rsell-Package
 
 ## List of Functions
 
-1. Check_Valid_Report
-2. Fix_Bin_Number
-3. Fix_Blank_SKU
-4. Fix_Partial_SKU
-5. Format_Alert_Text_Confirm
-6. Format_Alert_Text_Upload
-7. Get_Changed_Data
-8. Get_Changed_Goals
-9. Get_Item_Cost
-10. Get_Next_Sku
-11. GT_boxProfileT_Vals
-12. GT_InfoBoxT_Vals
-13. Load_Add_Inv_Rec
-14. Process_Valid_Report
-15. Secure_Check 
-16. Submit_Sales_Activity_DB
-17. Toast_Message
-18. Update_Inventory_PM
-19. Update_Quantity_Add
+1. Clean_Summary_Table
+2. Get_Changed_Data
+3. Get_Changed_Goals
+4. Get_Next_Sku
+5. GT_boxProfileT_Vals
+6. GT_InfoBoxT_Vals
+7. Load_Add_Inv_Rec
+8. Secure_Check
+9. Sort_Inv_Table
+10. Toast_Message
+11. Update_Quantity_Add
+12. User_Search_ID

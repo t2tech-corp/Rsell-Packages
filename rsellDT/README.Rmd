@@ -35,7 +35,4 @@ Package location in Github: [rsell](https://github.com/t2tech-corp/Rsell-Package
 2. Inv_Bin_Detail
 3. Inv_Popup
 4. Inventory_Table
-5. PM_Summary_Table
-6. Sales_Activity_Table
-7. Sales_Popup
-
+5. Sales_Popup

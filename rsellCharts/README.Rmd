@@ -34,5 +34,3 @@ Package location in Github: [rsell](https://github.com/t2tech-corp/Rsell-Package
 1. Cash_Flow_Chart
 2. Cash_Tracker_Charts
 3. Merch_Bar_Charts
-4. PM_Bar_Charts
-

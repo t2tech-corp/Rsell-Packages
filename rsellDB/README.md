@@ -23,18 +23,15 @@ Package location in Github:
 
 ## List of Functions
 
-1.  Add\_Inventory\_Item
+1.  DB\_Append\_Table
 2.  DB\_Connect
-3.  DB\_Disconnect
-4.  DB\_Table\_Exists
-5.  Get\_Inventory\_User
-6.  Get\_PM\_Sales\_Activity\_User
-7.  Get\_User\_Goals
-8.  Get\_User\_Record
-9.  PM\_Process\_Return
-10. Update\_Inventory\_Item
-11. Update\_User\_Goals
-12. Update\_User\_Last
-13. Update\_User\_Password
-14. Update\_User\_Profile
-15. Write\_Sales\_Activity\_User
+3.  DB\_Create\_Table
+4.  DB\_Disconnect
+5.  DB\_Execute\_Command
+6.  DB\_Inventory\_Record\_Update
+7.  DB\_List\_Fields
+8.  DB\_List\_Tables
+9.  DB\_Read\_Table
+10. DB\_Read\_Table\_User
+11. DB\_Remove\_Table
+12. DB\_Table\_Exists

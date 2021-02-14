@@ -11,11 +11,7 @@
 
 User_Goal_Modal <- function() {
 
-    if(is.null(user_goals)) {
-
-        user_goals <<- Get_User_Goals(session_user_record$user_id)
-
-    }
+    if(is.null(user_goals)) { user_goals <<- DB_Read_Table_User(user_goals_name) }
 
     user_goals <- user_goals %>% filter(year == lubridate::year(Sys.Date()))
 
