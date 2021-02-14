@@ -18,15 +18,17 @@ R-Sell is a custom application created by T2 Technologies to support online rese
 ## Packages
 
 1. rsell
-2. rsellAWS
-3. rsellCharts
-4. rsellDB
-5. rsellDT
-6. rsellModals
-7. rsellSecurity
-8. rsellShiny
-9. rsellTables
+2. rsellAdmin
+3. rsellAWS
+4. rsellCharts
+5. rsellDB
+6. rsellDT
+7. rsellModals
+8. rsellPoshmark
+9. rsellSecurity
+10. rsellShiny
+11. rsellTables
 
 ## Versions
 
-Version 1.0.0 is the initial data load for the app.
+Version 1.1.0
